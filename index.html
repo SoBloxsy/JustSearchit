@@ -55,59 +55,59 @@ html {
   top: 13%;
   border-radius: 24px !important;
 }
-
+/*
 .gcse-search {
   background: transparent;
 }
-
+*/
 button {
-  border-radius: 5px !important;
-  font-family: product_sansregular !important;
+  font-family: arial,sans-serif !important;
   outline: 0px;
   border: 0px !important;
-  background-color: #2b2b2b !important;
+  color: #3c4043;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
-.gsc-input-box {
+button:hover {
+  border: 10px;
+  border-color: black;
+}
+
+.gsc-input-box,
+input {
   border-radius: 24px !important;
-  width: 50% !important;
   font-family: product_sansregular !important;
-  height: 30px !important;
   outline: none !important;
   border: 1px solid #dfe1e5;
-}
+  width: 100% !important;
 
-input {
-  font-family: product_sansregular !important;
-  height: auto;
-}
-
-div {
-  width: 100%;
-}
-
-.gsc-input {
-  width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gsc-input-box {
-  width: auto !important;
-  max-width: 584px;
+  /* max-width: 100%; */
   background: #fff;
   display: flex;
   border: 1px solid #dfe1e5;
-  box-shadow: none;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);;
   z-index: 3;
   height: 44px !important;
   margin: 0 auto;
-  flex-basis: 10em;
-  flex-grow: 0.5;
-  flex-shrink: 0.5;
+  text-align: center;
 }
 
+.searchholder {  
+  width: 100%;
+}
+
+/*
 tbody,
 tr {
   width: 100%;
@@ -115,6 +115,7 @@ tr {
   justify-content: center;
   align-items: center;
 }
+*/
 
 </style>
 </head>
@@ -128,12 +129,30 @@ tr {
   <h1>
     Just Search It
     <p>from sobloxsy</p>
-    
   </h1>
-<script async src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"></script>
-<div class="gcse-searchbox-only"></div>
+  <form
+    method="get"
+    action="https://justsearchit.sobloxsy.com/search.html"
+    class="search-form"
+  >
+    <div class="searchholder">
+      <input
+        type="text"
+        title="Search the internet"
+        class="form-control"
+        name="q"
+        placeholder="Search the internet"
+      />
+      <div class="searchholder">
+        <button class="btn" title="Search" type="submit">Just Search It</button>
+      </div>
+    </div>
+  </form>
+  <script
+    async
+    src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"
+  ></script>
 </div>
-
 
 </body>
 </html>
