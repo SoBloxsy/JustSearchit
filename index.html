@@ -91,20 +91,29 @@ input {
   outline: none !important;
   border: 1px solid #dfe1e5;
   width: 100% !important;
-
-  /* max-width: 100%; */
   background: #fff;
   display: flex;
   border: 1px solid #dfe1e5;
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);;
+  box-shadow: none;
   z-index: 3;
   height: 44px !important;
   margin: 0 auto;
   text-align: center;
 }
 
+input:hover, input:focus {
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
 .searchholder {  
   width: 100%;
+}
+
+.searchbarhold {
+  position: relative;
+    margin: 0 auto;
+    padding-top: 6px;
+  width: 70%
 }
 
 /*
@@ -125,7 +134,7 @@ tr {
 
 <title>Just Search It</title>
 
-<div>
+<div class="searchbarhold">
   <h1>
     Just Search It
     <p>from sobloxsy</p>
