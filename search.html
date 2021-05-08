@@ -30,14 +30,23 @@
   font-style: normal;
 }
 
-body, html, button, input, p, div, img {
+body,
+html,
+button,
+input,
+p,
+div,
+img {
   border-radius: 10px !important;
   font-family: productsans !important;
+  color: #222122;
 }
 
-h1 {
+.logo {
   font-size: 20px !important;
   margin: 0px;
+  text-decoration: none;
+  color: black;
 }
 
 h2 {
@@ -46,18 +55,32 @@ h2 {
   color: gray;
 }
 
+a:link {
+  color: #1a0dab;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
 
+a:visited {
+  color: #660099;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
 <title>We're Searching It</title>
-<h1 href="https://JustSearchIt.sobloxsy.com">Just Search It</h1>
-<h2href="https://sobloxsy.com/about">from sobloxsy</h2>
+<a class="logo" href="https://JustSearchIt.sobloxsy.com">Just Search It</a>
+<h2 href="https://sobloxsy.com/about">from sobloxsy</h2>
 <script async src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"></script>
 <div class="gcse-searchresults-only"></div>
 
 
-<script src="filesystem:chrome-extension://lkfkkhfhhdkiemehlpkgjeojomhpccnh/temporary/script.js">
 </script>
 </body>
 </html>
