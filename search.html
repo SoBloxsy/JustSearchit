@@ -61,7 +61,7 @@ a:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-a:visited { 
+a:visited {
   color: #660099 !important;
   background-color: transparent !important;
   text-decoration: none !important;
@@ -71,13 +71,43 @@ a:hover {
   background-color: transparent !important;
   text-decoration: underline !important;
 }
+
+.searchbar {
+  background: #fff;
+  display: flex;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  height: 39px;
+  border-radius: 24px;
+  z-index: 3;
+  height: 44px;
+  margin: 0 auto;
+}
+
 </style>
 </head>
 <body>
 <title>We're Searching It</title>
 <a class="logo" href="https://JustSearchIt.sobloxsy.com">Just Search It</a>
 <h2 href="https://sobloxsy.com/about">from sobloxsy</h2>
+<input name="q" class="searchbar">
 <script async src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"></script>
 <div class="gcse-searchresults-only"></div>
+
+
+<script>
+// check if there is any text in the search string
+if (window.location.search.length > 0) {
+  // retrieve the "q" keyed search string value
+  var q = window.location.search.substring(1).split('&').filter(function(x) {
+    return x.substring(0, 2) === 'q=';
+  })[0].substring(2);
+  // put the value to the search box if it is not empty
+  if (q.length > 0) {
+    document.querySelector('input[name="q"]').value = q;
+  }
+}
+//# sourceURL=userscript.js
+</script>
 </body>
 </html>
