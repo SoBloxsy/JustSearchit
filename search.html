@@ -33,7 +33,6 @@
 body,
 html,
 button,
-input,
 p,
 div,
 img {
@@ -83,7 +82,9 @@ a:hover {
   border: 1px solid transparent;
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   height: 39px !important;
-  border-radius: 24px !important;
+  border-top-left-radius: 24px !important;
+  border-bottom-left-radius: 24px !important;
+  border-radius: 0px;
   z-index: 3;
   /* height: 44px; */
   margin-bottom: 10px;
@@ -130,6 +131,34 @@ h2:hover {
 .logo:hover {
   width: 125px;
 }
+
+.searchbtnimg {
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  width: 24px;
+  color: #4285f4;
+}
+.searchbtn {
+  background: #fff;
+  border: 0px;
+  border-radius:  0px !important;
+  border-top-right-radius: 24px !important;
+  border-bottom-right-radius: 24px !important;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  color: white;
+  height: 43px !important;
+  margin-top: 28px;
+  z-index: 3;
+  width: 52px;
+}
+
+.searchholder {
+  display: flex;
+  flex-direction: row;
+}
 </style>
 </head>
 <body>
@@ -142,11 +171,37 @@ h2:hover {
     border="0"
     data-atf="1"
 /></a>
-
-<a href="https://sobloxsy.com/about"><h2 class="sublogo" >from sobloxsy</h2></a>
+<a href="https://sobloxsy.com/about"><h2 class="sublogo">from sobloxsy</h2></a>
 
 <div class="searchbardiv">
-  <input align="right" name="q" class="searchbar" />
+  <form
+    method="get"
+    action="https://justsearchit.sobloxsy.com/search.html"
+    class="search-form"
+  >
+    <div class="searchholder">
+      <input
+        align="right"
+        name="q"
+        class="searchbar"
+        type="text"
+        title="Search the internet"
+        placeholder="Search the internet" />
+      <button class="searchbtn" title="Search" type="submit">
+        <div>
+          <span class="searchbtnimg"><svg
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              ></path></svg
+          ></span>
+        </div>
+      </button>
+    </div>
+  </form>
 </div>
 
 <script async src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"></script>
