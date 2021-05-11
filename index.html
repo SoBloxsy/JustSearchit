@@ -38,7 +38,7 @@ body {
   width: 100%;
   height: 80%;
   text-align: center;
-  font-family: product_sansregular !important;
+  font-family: product_sansregular;
   color: #222122;
   background: white;
   margin: 0px;
@@ -47,7 +47,7 @@ body {
   top: 13%;
   border-radius: 20px;
 }
-button {
+.searchbtn {
   font-family: arial, sans-serif !important;
   outline: 0px;
   color: #3c4043;
@@ -64,17 +64,14 @@ button {
   cursor: pointer;
   user-select: none;
 }
-button:hover {
+.searchbtn:hover {
   border: 1px solid #dfe1e5;
   border-bottom-width: 2px;
-/*
-  box-shadow: 0 2px 5px 1px black;
-*/
 }
 
 input {
   border-radius: 24px !important;
-  font-family: product_sansregular !important;
+  font-family: product_sansregular;
   outline: none !important;
   border: 1px solid #dfe1e5;
   width: 100%;
@@ -87,6 +84,7 @@ input {
   text-align: center;
   font-size: 16px;
   transition-duration: 0.5s;
+  max-width: 584px;
 }
 input:hover,
 input:focus {
@@ -105,7 +103,9 @@ input:focus {
 
 .logo {
   height: auto;
-  width: 300px;
+  min-width: 150px;
+  max-width: 300px;
+  width: 100%;
   transition-duration: 0.2s;
 }
 .logo:hover {
@@ -137,7 +137,45 @@ input:focus {
 .bomtext {
  text-decoration: none;
  color: #70757a;
+ font-size: 16px
 }
+
+.dark-mode {
+  filter: invert(1)
+}
+
+.tdm {
+  border: 1px;
+  font-family: product_sansregular;
+  color: white;
+  border-radius: 10px;
+  background: #2f2f30;
+  font-size: 16px;
+}
+
+.subbtn {
+  font-family: arial, sans-serif !important;
+  outline: 0px;
+  color: #ffffff;
+  background-color: #3487da;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  content: "New Request"
+}
+.subbtn:hover {
+  border: 1px solid #2d75bd;
+  border-bottom-width: 2px;
+}
+
 </style>
 </head>
 <body>
@@ -154,6 +192,7 @@ input:focus {
       border="0"
       data-atf="1"
       class="logo"
+      align="center"
     />
     <p class="sublogo">from sobloxsy :)</p>
   </div>
@@ -171,8 +210,14 @@ input:focus {
         placeholder="Search the internet"
         align="center"
       />
+
       <div class="searchholder">
-        <button class="btn" title="Search" type="submit">Just Search It</button>
+        <button class="searchbtn" title="Search" type="submit">
+          Just Search It
+        </button>
+                <button class="subbtn" title="Subscribe">
+          Subscribe
+        </button>
       </div>
     </div>
   </form>
@@ -183,12 +228,22 @@ input:focus {
 </div>
 
 <div class="bottombar">
-  <div>
-    <a  class="bomtext" href="">
-      <span class="bomtext">Carbon neutral since 2021</span>
-      </a>
+  <div class="bomtext">
+    <span class="bomtext">Carbon neutral since 2021</span>
   </div>
 </div>
 
+
+<script>
+var btn = document.querySelector(".subbtn");
+
+btn.addEventListener("mouseover", function() {
+  this.textContent = "Subscribe?";
+})
+btn.addEventListener("mouseout", function() {
+  this.textContent = "Subscribe";
+})
+//# sourceURL=userscript.js
+</script>
 </body>
 </html>
