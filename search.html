@@ -166,12 +166,14 @@ h2:hover {
   position: fixed !important;
   top: 0 !important;
   width: 100% !important;
+  overflow: hidden;
 }
 
 .sticky2 {
   position: fixed !important;
   top: 0 !important;
   height: 32px !important;
+  overflow: hidden;
 }
 
 </style>
@@ -179,8 +181,8 @@ h2:hover {
 <body>
 <title name="title">We're Searching It</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<div class="logodiv" id="header">
+<div class="header">
+<div class="logodiv">
   <a href="https://justsearchit.sobloxsy.com">
     <img
       class="logo"
@@ -225,7 +227,7 @@ h2:hover {
     </div>
   </form>
 </div>
-
+</div>
 <script async src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"></script>
 <div class="gcse-searchresults-only"></div>
 
@@ -248,21 +250,7 @@ if (window.location.search.length > 0) {
 
 window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("header");
-
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("header2");
+var header = document.getElementsByClassName("header");
 
 var sticky = header.offsetTop;
 
