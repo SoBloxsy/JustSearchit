@@ -176,12 +176,13 @@ h2:hover {
   overflow: hidden;
 }
 
+.header
 </style>
 </head>
 <body>
 <title name="title">We're Searching It</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<div class="header">
+<div class="header" id=header>
 <div class="logodiv">
   <a href="https://justsearchit.sobloxsy.com">
     <img
@@ -233,24 +234,9 @@ h2:hover {
 
 
 <script>
-
-if (window.location.search.length > 0) {
-  // retrieve the "q" keyed search string value
-  var q = window.location.search.substring(1).split('&').filter(function(x) {
-    return x.substring(0, 2) === 'q=';
-  })[0].substring(2);
-  // put the value to the search box if it is not empty
-  if (q.length > 0) {
-    document.querySelector('input[name="q"]').value = q;
-    document.querySelector('title[name="title"]').value = "We're Searching" + q;
-  }
-}
-
-
-
 window.onscroll = function() {myFunction()};
 
-var header = document.getElementsByClassName("header");
+var header = document.getElementById("Header");
 
 var sticky = header.offsetTop;
 
@@ -261,7 +247,6 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
-
 //# sourceURL=userscript.js
 </script>
 </body>
