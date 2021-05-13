@@ -176,7 +176,9 @@ h2:hover {
   overflow: hidden;
 }
 
-.header
+.header {
+  z-index: 5;
+}
 </style>
 </head>
 <body>
@@ -236,7 +238,7 @@ h2:hover {
 <script>
 window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("Header");
+var header = document.getElementById("header");
 
 var sticky = header.offsetTop;
 
