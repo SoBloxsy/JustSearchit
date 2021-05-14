@@ -36,7 +36,7 @@ h1 {
 
 body {
   width: 100%;
-  height: 80%;
+  height: 81.5%;
   text-align: center;
   font-family: product_sansregular;
   color: #222122;
@@ -111,13 +111,14 @@ input:focus {
 .logo:hover {
   width: 320px;
 }
-.sublogo {
+.sublogo, a {
   font-size: 15px;
-  color: rgb(81, 81, 81);
+  color: rgb(81, 81, 81) !important;
   margin-top: -25px;
   transition-duration: 0.2s;
+  vertical-align: center;
 }
-.sublogo:hover {
+a:hover {
   font-size: 16px;
 }
 
@@ -127,21 +128,19 @@ input:focus {
   background: #f2f2f2;
   width: 100%;
   height: 30px;
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
-  justify-content: space-evenly;
   top: 100%;
 }
 
 .bomtext {
- text-decoration: none;
- color: #70757a;
- font-size: 16px
+  text-decoration: none;
+  color: #70757a;
+  font-size: 16px;
+  text-align: center;
 }
 
 .dark-mode {
-  filter: invert(1)
+  filter: invert(1);
 }
 
 .tdm {
@@ -158,7 +157,7 @@ input:focus {
   outline: 0px;
   color: #ffffff;
   background-color: #3487da;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #3487da;
   border-radius: 4px;
   font-size: 14px;
   margin: 11px 4px;
@@ -169,11 +168,26 @@ input:focus {
   text-align: center;
   cursor: pointer;
   user-select: none;
-  content: "New Request"
 }
 .subbtn:hover {
   border: 1px solid #2d75bd;
   border-bottom-width: 2px;
+}
+
+.top {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+.toptext {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px;
+  color: #222;
+  margin-left: 15px;
 }
 
 </style>
@@ -183,7 +197,6 @@ input:focus {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <title>Just Search It</title>
-
 <div class="searchbarhold">
   <div>
     <img
@@ -194,7 +207,7 @@ input:focus {
       class="logo"
       align="center"
     />
-    <p class="sublogo">from sobloxsy :)</p>
+    <p class="sublogo"> <a href="https://sobloxsy.com/about">from sobloxsy :)</a> </p>
   </div>
   <form
     method="get"
@@ -227,11 +240,9 @@ input:focus {
   ></script>
 </div>
 
-<div class="bottombar">
-  <div class="bomtext">
-    <span class="bomtext">Carbon neutral since 2021</span>
+  <div class="bottombar">
+    <span class="bomtext">Not affiliated with google llc.</span>
   </div>
-</div>
 
 
 <script>
@@ -243,6 +254,8 @@ btn.addEventListener("mouseover", function() {
 btn.addEventListener("mouseout", function() {
   this.textContent = "Subscribe";
 })
+
+
 //# sourceURL=userscript.js
 </script>
 </body>
