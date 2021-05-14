@@ -34,7 +34,6 @@ body,
 html,
 button,
 p,
-div,
 img {
   border-radius: 10px !important;
   font-family: productsans !important;
@@ -55,7 +54,7 @@ a:hover {
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
   left: -23px;
   padding: 4px 28px 0 30px;
   top: 26px;
@@ -71,12 +70,11 @@ a:hover {
   font-size: 10px;
   margin: 0px;
   color: gray;
-  margin-top: 38px;
   text-decoration: none;
-  position: absolute;
+  position: fixed;
   /* padding: 4px 28px 0 30px; */
-  top: 26px;
-  margin-left: 20px !important;
+  top: 60px;
+  left: 30px !important;
   transition-duration: 0.4s;
 }
 
@@ -152,7 +150,8 @@ h2:hover {
   width: 43px;
 }
 
-.searchbtn:hover, .searchbtnimg:hover {
+.searchbtn:hover,
+.searchbtnimg:hover {
   background-color: rgb(223, 223, 223);
   color: white;
 }
@@ -167,18 +166,18 @@ h2:hover {
   top: 0 !important;
   width: 100% !important;
   overflow: hidden;
-}
-
-.sticky2 {
-  position: fixed !important;
-  top: 0 !important;
-  height: 32px !important;
-  overflow: hidden;
+  margin: 0px !important;
+  padding: 0px !important;
+  right: 2px;
 }
 
 .header {
   z-index: 5;
+  background-color: white;
+  border-bottom: 1px solid rgb(213, 210, 210);
+  border-radius: 0px;
 }
+
 </style>
 </head>
 <body>
