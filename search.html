@@ -173,12 +173,11 @@ h2:hover {
 }
 
 .header {
-  z-index: 5;
+  z-index: 1000005;
   background-color: white;
   border-bottom: 1px solid #dfe1e5;
   border-radius: 0px;
 }
-
 </style>
 </head>
 <body>
@@ -259,6 +258,8 @@ if (window.location.search.length > 0) {
     document.querySelector('title[name="title"]').value = "We're Searching" + q;
   }
 }
+
+var web = document.getElementsByClassName
 //# sourceURL=userscript.js
 </script>
 </body>
