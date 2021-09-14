@@ -78,10 +78,10 @@ a:hover {
 }
 
 .searchbar {
-  background: #fff;
+  background: rgb(226, 223, 223);
   display: flex;
   border: 1px solid transparent;
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  color: grey;
   height: 39px !important;
   border-radius: 24px;
   border-top-right-radius: 0px;
@@ -94,6 +94,15 @@ a:hover {
   outline: none;
   margin-top: 28px;
   max-width: 533px;
+  transition-duration: 0.4s;
+}
+
+.searchbar:focus,
+.searchbar:hover {
+  color: black;
+  background: rgb(254, 254, 254);
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  transition-duration: 0.4s;
 }
 input {
   background-color: transparent;
@@ -140,22 +149,25 @@ h2:hover {
   color: #4285f4;
 }
 .searchbtn {
-  background: #fff;
+  background: rgb(226, 223, 223);
   border: 0px;
   border-radius: 24px;
-    border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   height: 43px !important;
   margin-top: 28px;
-  margin-left: 6px;
+  margin-left: 0px;
   z-index: 3;
   width: 43px;
+  transition-duration: 0.4s;
 }
 
-.searchbtn:hover{
-  background-color: rgb(223, 223, 223);
-  color: white;
+.searchbtn:hover {
+  color: black;
+  background: rgb(254, 254, 254);
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  transition-duration: 0.4s;
+  margin-left: 5px;
 }
 
 .searchholder {
@@ -180,11 +192,33 @@ h2:hover {
   border-bottom: 1px solid #dfe1e5;
   border-radius: 0px;
 }
+
+.homebtn {
+  background: rgb(226, 223, 223);
+  border: 0px;
+  border-radius: 0px;
+  height: 43px !important;
+  margin-top: 28px;
+  margin-left: 0px;
+  z-index: 3;
+  width: 43px;
+  transition-duration: 0.4s;
+}
+
+.homebtn:hover {
+  color: black;
+  background: rgb(254, 254, 254);
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  transition-duration: 0.4s;
+  margin-top: 20px;
+}
 </style>
 </head>
 <body>
 <title name="title">We're Searching It</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
 <div class="header" id=header>
 <div class="logodiv">
   <a href="https://justsearchit.sobloxsy.com">
@@ -212,8 +246,16 @@ h2:hover {
         class="searchbar"
         type="text"
         title="Search the internet"
-        placeholder="Search :)"
+        placeholder="Search for Anything"
+        
       />
+            <button class="homebtn" title="Home" type="link">
+        <div>
+<span class="material-icons-round">
+home
+</span>
+        </div>
+      </button>
       <button class="searchbtn" title="Search" type="submit">
         <div>
           <span class="searchbtnimg"
