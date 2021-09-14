@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 
-<style id="webmakerstyle">
 @font-face {
   font-family: "gothambold";
   src: url("https://files.sobloxsy.com/gothambold-webfont.woff2")
@@ -120,7 +119,7 @@ input:focus {
   vertical-align: center;
 }
 .sub:hover {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .bottombar {
@@ -131,6 +130,7 @@ input:focus {
   height: 30px;
   text-align: center;
   top: 100%;
+  padding-top: 10px;
 }
 
 .bomtext {
@@ -138,6 +138,7 @@ input:focus {
   color: #70757a;
   font-size: 16px;
   text-align: center;
+
 }
 
 .dark-mode {
@@ -185,6 +186,7 @@ input:focus {
 
 a {
   text-decoration: none;
+  color: #46494d;
 }
 
 .toptext {
@@ -263,9 +265,13 @@ a {
     src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"
   ></script>
 </div>
+<div>
+    <p class="message">Its almost September 25th!</p>
+</div>
+
 
 <div class="bottombar">
-  <span class="bomtext">Not affiliated with google llc.</span>
+  <span class="bomtext">Not affiliated with <a href="https://www.google.com/">Google llc.</a></span>
 </div>
 
 
@@ -279,8 +285,6 @@ btn.addEventListener("mouseout", function() {
   this.textContent = "Subscribe";
 })
 
-
-//# sourceURL=userscript.js
 </script>
 </body>
 </html>
