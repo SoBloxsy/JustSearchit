@@ -139,7 +139,7 @@ h2:hover {
   width: 125px;
 }
 
-.searchbtnimg {
+.btnimg {
   display: inline-block;
   fill: currentColor;
   height: 24px;
@@ -210,7 +210,17 @@ h2:hover {
   background: rgb(254, 254, 254);
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   transition-duration: 0.4s;
-  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.smile{
+  width: 17px;
+  margin-bottom: -5px;
+}
+
+.ACRAdd {
+    border-left: 1px solid #000000;
+    height: 65%;
 }
 </style>
 </head>
@@ -232,8 +242,15 @@ h2:hover {
         data-atf="1"
     /></a>
     <a href="https://sobloxsy.com/about"
-      ><h2 class="sublogo">from sobloxsy :)</h2></a
-    >
+      ><h2 class="sublogo">
+        from sobloxsy
+        <object
+          class="smile"
+          title=":)"
+          data="https://files.sobloxsy.com/Iconlogo2.svg"
+        >
+        </object></h2
+    ></a>
   </div>
   <div class="searchbardiv">
     <form
@@ -250,12 +267,22 @@ h2:hover {
           title="Search the internet"
           placeholder="Search for Anything"
         />
+
         <button class="homebtn" title="Home" type="link">
-          <div><span class="material-icons-round"> home </span></div>
+          <div>
+            <a href="https://justsearchit.sobloxsy.com/"
+              ><object
+                class="btnimg"
+                title="home"
+                data="https://files.sobloxsy.com/icons/home.svg"
+              >
+              </object
+            ></a>
+          </div>
         </button>
         <button class="searchbtn" title="Search" type="submit">
           <div>
-            <span class="searchbtnimg"
+            <span class="btnimg"
               ><svg
                 focusable="false"
                 xmlns="http://www.w3.org/2000/svg"
