@@ -220,6 +220,9 @@ a:hover {
   font-size: 20px;
 }
 
+.popularsearchdiv{
+  margin-top: 50px;
+}
 </style>
 </head>
 <body>
@@ -294,7 +297,12 @@ a:hover {
     (Iren's Birthday).
   </p>
 </div>
-
+<div class="popularsearchdiv">
+  <span>Popular Searches:</span>
+<div id="queries"></div>
+<script src="https://cse.google.com/query_renderer.js"></script>
+<script src="https://cse.google.com/api/b32181a0452f9ec07/popularqueryjs?view=overall&callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+</div>
 <div class="bottombar">
   <span class="bomtext"
     >Not affiliated with <a href="https://www.google.com/">Google LLC</a>.</span
@@ -302,18 +310,6 @@ a:hover {
 </div>
 
 
-<script>
-var btn = document.querySelector(".subbtns");
-
-btn.addEventListener("mouseover", function() {
-  this.textContent = "Subscribe?";
-})
-btn.addEventListener("mouseout", function() {
-  this.textContent = "Subscribe";
-})
-
-
-//# sourceURL=userscript.js
 </script>
 </body>
 </html>
