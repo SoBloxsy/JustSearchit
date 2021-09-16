@@ -89,7 +89,7 @@ input {
 input:hover,
 input:focus {
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-   font-size: 20px;
+  font-size: 20px;
 }
 
 .searchholder {
@@ -140,7 +140,6 @@ input:focus {
   color: #70757a;
   font-size: 16px;
   text-align: center;
-
 }
 
 .dark-mode {
@@ -190,6 +189,11 @@ a {
   text-decoration: none;
   color: #46494d;
 }
+a:hover {
+  text-decoration: underline;
+  color: black;
+  transition-duration: 0.4s;
+}
 
 .toptext {
   display: inline-block;
@@ -211,6 +215,11 @@ a {
   margin-bottom: -10px;
 }
 
+.message {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
 </style>
 </head>
 <body>
@@ -218,6 +227,7 @@ a {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <title>Just Search It</title>
+
 <div class="searchbarhold">
   <div>
     <img
@@ -267,13 +277,13 @@ a {
     src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"
   ></script>
 </div>
-<div>
-    <p class="message">Its almost September 25th (Iren's Bday)!</p>
-</div>
-
+<div><p class="message">Its almost <a href="https://www.google.com/search?q=days+until+september+25">September 25th</a> (Iren's Bday)!</p></div>
 
 <div class="bottombar">
-  <span class="bomtext">Not affiliated with <a href="https://www.google.com/">Google llc.</a></span>
+  <span class="bomtext"
+    >Not affiliated with <a href="https://www.google.com/">Google LLC</a>.</span
+  >
+  
 </div>
 
 
