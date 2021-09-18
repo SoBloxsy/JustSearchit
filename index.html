@@ -105,13 +105,11 @@ input:focus {
 .logo {
   height: auto;
   min-width: 150px;
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   transition-duration: 0.2s;
 }
-.logo:hover {
-  width: 320px;
-}
+
 .sublogo,
 .sub {
   font-size: 15px;
@@ -253,6 +251,7 @@ a:hover {
           class="smile"
           title=":)"
           data="https://files.sobloxsy.com/Iconlogo2.svg"
+          height="30"
         >
         </object>
       </a>
@@ -271,15 +270,14 @@ a:hover {
         name="q"
         placeholder="Search the Internet"
         align="center"
+        id="searchbar"
       />
 
       <div class="searchholder">
         <button class="searchbtn" title="Search" type="submit">
           Just Search It
         </button>
-        <a class="textbtn"
-          ><button class="subbtn" title="Subscribe">Subscribe</button></a
-        >
+        <button class="subbtn" title="Subscribe" type="button" onclick="focusMethod()">Subscribe</button>
       </div>
     </div>
   </form>
@@ -311,7 +309,11 @@ a:hover {
 
 
 <script>
-console.log("javascript lol")
+document.getElementById("searchba").focus();
+
+focusMethod = function getFocus() {
+  document.getElementById("searchbar").value = "Sobloxsy";
+}
 //# sourceURL=userscript.js
 </script>
 </body>
