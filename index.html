@@ -47,29 +47,8 @@ body {
   top: 13%;
   border-radius: 20px;
 }
-.searchbtn {
-  font-family: arial, sans-serif !important;
-  outline: 0px;
-  color: #3c4043;
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-}
-.searchbtn:hover {
-  border: 1px solid #dfe1e5;
-  border-bottom-width: 2px;
-}
 
-input {
+.searchinput {
   border-radius: 24px !important;
   font-family: product_sansregular;
   outline: none !important;
@@ -86,14 +65,18 @@ input {
   transition-duration: 0.5s;
   max-width: 584px;
 }
-input:hover,
-input:focus {
+.searchinput:hover,
+.searchinput:focus {
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   font-size: 18px;
 }
 
 .searchholder {
   width: 100%;
+}
+
+.searchbuttonholder {
+  margin-bottom: 20px;
 }
 .searchbarhold {
   position: relative;
@@ -153,13 +136,34 @@ input:focus {
   font-size: 16px;
 }
 
+.searchbtn {
+  color: #3c4043;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+}
+.searchbtn:hover {
+  border: 1px solid #dfe1e5;
+}
+
 .subbtn {
-  font-family: arial, sans-serif !important;
-  outline: 0px;
   color: #ffffff;
   background-color: #3487da;
   border: 1px solid #3487da;
-  border-radius: 4px;
+}
+.subbtn:hover {
+  border: 1px solid #2d75bd;
+}
+
+.btn:hover {
+  border-bottom-width: 4px;
+  transition-duration: 0.4s
+}
+
+.btn {
+   transition-duration: 0.4s;
+  font-family: arial, sans-serif !important;
+  outline: 0px;
+  border-radius: 50px;
   font-size: 14px;
   margin: 11px 4px;
   padding: 0 16px;
@@ -169,10 +173,6 @@ input:focus {
   text-align: center;
   cursor: pointer;
   user-select: none;
-}
-.subbtn:hover {
-  border: 1px solid #2d75bd;
-  border-bottom-width: 2px;
 }
 
 .textbtn {
@@ -210,7 +210,7 @@ a:hover {
 
 .smile {
   width: 30px;
-  margin-bottom: -10px;
+  margin-bottom: -45px;
 }
 
 .message {
@@ -218,13 +218,13 @@ a:hover {
   font-size: 20px;
 }
 
-.popularsearchdiv{
+.popularsearchdiv {
   margin-top: 50px;
 }
+
 </style>
 </head>
 <body>
-<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link
   rel="apple-touch-icon"
@@ -233,7 +233,6 @@ a:hover {
   href="thelogo.png"
 />
 <link rel="shortcut icon" href="favicon.ico" /> <title>Just Search It</title>
-
 <div class="searchbarhold">
   <div>
     <img
@@ -266,18 +265,20 @@ a:hover {
       <input
         type="text"
         title="Search the Internet"
-        class="form-control"
+        class="form-control searchinput"
         name="q"
         placeholder="Search the Internet"
         align="center"
         id="searchbar"
       />
-
-      <div class="searchholder">
-        <button class="searchbtn" title="Search" type="submit">
+      <div class="searchbuttonholder">
+        <button class="searchbtn btn" title="Search" type="submit">
           Just Search It
         </button>
-        <button class="subbtn" title="Subscribe" type="button" onclick="focusMethod()">Subscribe</button>
+        <button class="subbtn btn" title="Subscribe" type="button">
+          Subscribe
+        </button>
+
       </div>
     </div>
   </form>
@@ -286,20 +287,12 @@ a:hover {
     src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"
   ></script>
 </div>
-<div>
-  <p class="message">
-    Its almost
-    <a href="https://www.google.com/search?q=days+until+september+25"
-      >September 25th</a
-    >
-    (Iren's Birthday).
-  </p>
-</div>
+<div><p class="message">It's Spooky Month!</p></div>
 <div class="popularsearchdiv">
   <span>Popular Searches:</span>
-<div id="queries"></div>
-<script src="https://cse.google.com/query_renderer.js"></script>
-<script src="https://cse.google.com/api/b32181a0452f9ec07/popularqueryjs?view=overall&callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+  <div id="queries"></div>
+  <script src="https://cse.google.com/query_renderer.js"></script>
+  <script src="https://cse.google.com/api/b32181a0452f9ec07/popularqueryjs?view=overall&callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
 </div>
 <div class="bottombar">
   <span class="bomtext"
@@ -309,11 +302,7 @@ a:hover {
 
 
 <script>
-document.getElementById("searchba").focus();
-
-focusMethod = function getFocus() {
-  document.getElementById("searchbar").value = "Sobloxsy";
-}
+console.log("javascript lol")
 //# sourceURL=userscript.js
 </script>
 </body>
