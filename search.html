@@ -1,337 +1,307 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
 
-<style id="webmakerstyle">
-@font-face {
-  font-family: "gothambold";
-  src: url("https://files.sobloxsy.com/gothambold-webfont.woff2")
-      format("woff2"),
-    url("https://files.sobloxsy.com/gothambold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "gothammedium";
-  src: url("https://files.sobloxsy.com/gothammedium-webfont.woff2")
-      format("woff2"),
-    url("https://files.sobloxsy.com/gothammedium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "productsans";
-  src: url("https://files.sobloxsy.com/product_sans_regular-webfont.woff2")
-      format("woff2"),
-    url("https://files.sobloxsy.com/product_sans_regular-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+  <style id="webmakerstyle">
+    @font-face {
+      font-family: "gothambold";
+      src: url("https://files.sobloxsy.com/gothambold-webfont.woff2") format("woff2"),
+        url("https://files.sobloxsy.com/gothambold-webfont.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
 
-body,
-html,
-p,
-img {
-  border-radius: 10px !important;
-  font-family: productsans !important;
-  color: #222122;
-}
-a:link {
-  color: #1a0dab !important;
-  text-decoration: none !important;
-}
-a:visited {
-  color: #660099 !important;
-  background-color: transparent !important;
-  text-decoration: none !important;
-}
-a:hover {
-  background-color: transparent !important;
-  text-decoration: underline !important;
-}
+    @font-face {
+      font-family: "gothammedium";
+      src: url("https://files.sobloxsy.com/gothammedium-webfont.woff2") format("woff2"),
+        url("https://files.sobloxsy.com/gothammedium-webfont.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
 
-.logo {
-  position: fixed;
-  left: -23px;
-  padding: 4px 28px 0 30px;
-  top: 26px;
-  min-width: 75px;
-  max-width: 115px;
-  width: 25%;
-  height: auto;
-  margin-left: 20px !important;
-  transition-duration: 0.4s;
-}
+    @font-face {
+      font-family: "productsans";
+      src: url("https://files.sobloxsy.com/product_sans_regular-webfont.woff2") format("woff2"),
+        url("https://files.sobloxsy.com/product_sans_regular-webfont.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
 
-.sublogo {
-  font-size: 10px;
-  margin: 0px;
-  color: gray;
-  text-decoration: none;
-  position: fixed;
-  /* padding: 4px 28px 0 30px; */
-  top: 60px;
-  left: 30px !important;
-  transition-duration: 0.4s;
-}
+    body,
+    html,
+    p,
+    img {
+      border-radius: 10px !important;
+      font-family: productsans !important;
+      color: #222122;
+    }
 
-.searchbar {
-  background: rgb(226, 223, 223);
-  display: flex;
-  border: 1px solid transparent;
-  color: grey;
-  height: 39px !important;
-  border-radius: 24px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  z-index: 3;
-  /* height: 44px; */
-  margin-bottom: 10px;
-  width: 85%;
-  text-align: center;
-  outline: none;
-  margin-top: 28px;
-  max-width: 533px;
-  transition-duration: 0.4s;
-}
+    a:link {
+      color: #1a0dab !important;
+      text-decoration: none !important;
+    }
 
-.searchbar:focus,
-.searchbar:hover {
-  color: black;
-  background: rgb(254, 254, 254);
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-  transition-duration: 0.4s;
-}
-input {
-  background-color: transparent;
-  /* border: none; */
-  color: rgba(0, 0, 0, 0.87);
-  flex: 100%;
-  /* height: 34px; */
-  font-size: 16px;
-  font: 16px arial, sans-serif !important;
-}
+    a:visited {
+      color: #660099 !important;
+      background-color: transparent !important;
+      text-decoration: none !important;
+    }
 
-.searchbardiv {
-  position: relative;
-  margin: 0 auto;
-  margin-left: 133px;
-  max-width: 80%;
-  padding-left: 27px;
-}
+    a:hover {
+      background-color: transparent !important;
+      text-decoration: underline !important;
+    }
 
-#___gcse_0 {
-  outline-width: 2px !important;
-  margin-left: 160px;
-}
+    .logo {
+      position: fixed;
+      left: -23px;
+      padding: 4px 28px 0 30px;
+      top: 26px;
+      min-width: 75px;
+      max-width: 115px;
+      width: 25%;
+      height: auto;
+      margin-left: 20px !important;
+      transition-duration: 0.4s;
+    }
 
-.gsc-tabHeader {
-  border-radius: 0px !important;
-}
+    .sublogo {
+      font-size: 10px;
+      margin: 0px;
+      color: gray;
+      text-decoration: none;
+      position: fixed;
+      /* padding: 4px 28px 0 30px; */
+      top: 60px;
+      left: 30px !important;
+      transition-duration: 0.4s;
+    }
 
-h2:hover {
-  font-size: 12px;
-}
+    .searchbar {
+      background: rgb(226, 223, 223);
+      display: flex;
+      border: 1px solid transparent;
+      color: grey;
+      height: 39px !important;
+      border-radius: 24px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      z-index: 3;
+      /* height: 44px; */
+      margin-bottom: 10px;
+      width: 85%;
+      text-align: center;
+      outline: none;
+      margin-top: 28px;
+      max-width: 533px;
+      transition-duration: 0.4s;
+    }
 
-.logo:hover {
-  width: 125px;
-}
+    .searchbar:focus,
+    .searchbar:hover {
+      color: black;
+      background: rgb(254, 254, 254);
+      box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+      transition-duration: 0.4s;
+    }
 
-.btnimg {
-  display: inline-block;
-  fill: currentColor;
-  height: 24px;
-  line-height: 24px;
-  position: relative;
-  width: 24px;
-  color: #4285f4;
-}
-.searchbtn {
-  background: rgb(226, 223, 223);
-  border: 0px;
-  border-radius: 24px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  height: 43px !important;
-  margin-top: 28px;
-  margin-left: 0px;
-  z-index: 3;
-  width: 43px;
-  transition-duration: 0.4s;
-}
+    input {
+      background-color: transparent;
+      /* border: none; */
+      color: rgba(0, 0, 0, 0.87);
+      flex: 100%;
+      /* height: 34px; */
+      font-size: 16px;
+      font: 16px arial, sans-serif !important;
+    }
 
-.searchbtn:hover {
-  color: black;
-  background: rgb(254, 254, 254);
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-  transition-duration: 0.4s;
-  margin-left: 5px;
-}
+    .searchbardiv {
+      position: relative;
+      margin: 0 auto;
+      margin-left: 133px;
+      max-width: 80%;
+      padding-left: 27px;
+    }
 
-.searchholder {
-  display: flex;
-  flex-direction: row;
-}
+    #___gcse_0 {
+      outline-width: 2px !important;
+      margin-left: 160px;
+    }
 
-.sticky {
-  position: fixed !important;
-  top: 0 !important;
-  width: 100% !important;
-  overflow: hidden;
-  margin: 0px !important;
-  padding: 0px !important;
-  right: 2px;
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-}
+    .gsc-tabHeader {
+      border-radius: 0px !important;
+    }
 
-.header {
-  z-index: 1000005;
-  background-color: white;
-  border-bottom: 1px solid #dfe1e5;
-  border-radius: 0px;
-}
+    h2:hover {
+      font-size: 12px;
+    }
 
-.homebtn {
-  background: rgb(226, 223, 223);
-  border: 0px;
-  border-radius: 0px;
-  height: 43px !important;
-  margin-top: 28px;
-  margin-left: 0px;
-  z-index: 3;
-  width: 43px;
-  transition-duration: 0.4s;
-}
+    .logo:hover {
+      width: 125px;
+    }
 
-.homebtn:hover {
-  color: black;
-  background: rgb(254, 254, 254);
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-  transition-duration: 0.4s;
-  margin-left: 5px;
-}
+    .btnimg {
+      display: inline-block;
+      fill: currentColor;
+      height: 24px;
+      line-height: 24px;
+      position: relative;
+      width: 24px;
+      color: #4285f4;
+    }
 
-.smile{
-  width: 17px;
-  margin-bottom: -5px;
-}
+    .searchbtn {
+      background: rgb(226, 223, 223);
+      border: 0px;
+      border-radius: 24px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      height: 43px !important;
+      margin-top: 28px;
+      margin-left: 0px;
+      z-index: 3;
+      width: 43px;
+      transition-duration: 0.4s;
+    }
 
-.ACRAdd {
-    border-left: 1px solid #000000;
-    height: 65%;
-}
-</style>
+    .searchbtn:hover {
+      color: black;
+      background: rgb(254, 254, 254);
+      box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+      transition-duration: 0.4s;
+      margin-left: 5px;
+    }
+
+    .searchholder {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .sticky {
+      position: fixed !important;
+      top: 0 !important;
+      width: 100% !important;
+      overflow: hidden;
+      margin: 0px !important;
+      padding: 0px !important;
+      right: 2px;
+      box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    }
+
+    .header {
+      z-index: 1000005;
+      background-color: white;
+      border-bottom: 1px solid #dfe1e5;
+      border-radius: 0px;
+    }
+
+    .homebtn {
+      background: rgb(226, 223, 223);
+      border: 0px;
+      border-radius: 0px;
+      height: 43px !important;
+      margin-top: 28px;
+      margin-left: 0px;
+      z-index: 3;
+      width: 43px;
+      transition-duration: 0.4s;
+    }
+
+    .homebtn:hover {
+      color: black;
+      background: rgb(254, 254, 254);
+      box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+      transition-duration: 0.4s;
+      margin-left: 5px;
+    }
+
+    .smile {
+      width: 17px;
+      margin-bottom: -5px;
+    }
+
+    .ACRAdd {
+      border-left: 1px solid #000000;
+      height: 65%;
+    }
+  </style>
 </head>
+
 <body>
-<title name="title">We're Searching It</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link
-  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet"
-/>
-<div class="header" id="header">
-  <div class="logodiv">
-    <a href="https://justsearchit.sobloxsy.com">
-      <img
-        class="logo"
-        src="https://justsearchit.sobloxsy.com/thelogo.png"
-        title="You searched it, congrats!"
-        border="0"
-        data-atf="1"
-    /></a>
-    <a href="https://sobloxsy.com/about"
-      ><h2 class="sublogo">
-        from sobloxsy
-        <object
-          class="smile"
-          title=":)"
-          style="width: 17px;"
-          data="https://files.sobloxsy.com/Iconlogo2.svg"
-        >
-        </object></h2
-    ></a>
+  <title name="title">We're Searching It</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <div class="header" id="header">
+    <div class="logodiv">
+      <a href="/">
+        <img class="logo" src="https://justsearchit.sobloxsy.com/thelogo.png" title="You searched it, congrats!"
+          border="0" data-atf="1" /></a>
+      <a href="https://iren.blue/about">
+        <h2 class="sublogo">
+          from iren.blue
+          <object class="smile" title=":)" style="width: 17px;" data="https://files.sobloxsy.com/Iconlogo2.svg">
+          </object>
+        </h2>
+      </a>
+    </div>
+    <div class="searchbardiv">
+      <form method="get" action="/search.html" class="search-form">
+        <div class="searchholder" id="header2">
+          <input align="right" name="q" class="searchbar" id="searchbar" type="text" title="Search the internet"
+            placeholder="Search for Anything" />
+
+          <a href="/"><button class="homebtn" title="Home" type="link">
+              <div>
+                <object class="btnimg" title="home" data="https://files.sobloxsy.com/icons/home.svg">
+                </object>
+
+              </div>
+            </button></a>
+          <button class="searchbtn" title="Search" type="submit">
+            <div>
+              <span class="btnimg"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                  </path>
+                </svg></span>
+            </div>
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-  <div class="searchbardiv">
-    <form
-      method="get"
-      action="https://justsearchit.sobloxsy.com/search.html"
-      class="search-form"
-    >
-      <div class="searchholder" id="header2">
-        <input
-          align="right"
-          name="q"
-          class="searchbar"
-          type="text"
-          title="Search the internet"
-          placeholder="Search for Anything"
-        />
-
-        <a href="https://justsearchit.sobloxsy.com/"
-              ><button class="homebtn" title="Home" type="link">
-          <div>
-            <object
-                class="btnimg"
-                title="home"
-                data="https://files.sobloxsy.com/icons/home.svg"
-              >
-              </object>
-            
-          </div>
-        </button></a>
-        <button class="searchbtn" title="Search" type="submit">
-          <div>
-            <span class="btnimg"
-              ><svg
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                ></path></svg
-            ></span>
-          </div>
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-<script async src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"></script>
-<div class="gcse-searchresults-only"></div>
+  <script async src="https://cse.google.com/cse.js?cx=b32181a0452f9ec07"></script>
+  <div class="gcse-searchresults-only"></div>
 
 
-<script>
-window.onscroll = function() {myFunction()};
+  <script>
+    window.onscroll = function () { myFunction() };
 
-var header = document.getElementById("header");
+    var header = document.getElementById("header");
 
-var sticky = header.offsetTop;
+    var sticky = header.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
 
-if (window.location.search.length > 0) {
-  var q = window.location.search.substring(1).split('&').filter(function(x) {
-    return x.substring(0, 2) === 'q=';
-  })[0].substring(2);
-  if (q.length > 0) {
-    document.querySelector('input[name="q"]').value = decodeURI(q);
-    document.querySelector('title[name="title"]').value = "We're Searching" + q;
-  }
-}
 
-var thing = document.getElementsByClassName("gcsc-more-maybe-branding-root");
+    const url = new URL(window.location.href);
+    var q = url.searchParams.get("q")
+    document.getElementById('searchbar').value = q;
+    window.title = q;
 
-thing.remove
-//# sourceURL=userscript.js
-</script>
+    var thing = document.getElementsByClassName("gcsc-more-maybe-branding-root");
+
+    thing.remove
+    // # sourceURL=userscript.js
+  </script>
 </body>
+
 </html>
